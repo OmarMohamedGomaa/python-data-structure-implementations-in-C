@@ -29,7 +29,7 @@ gcc -g main.c dictionaries.c list.c tuples.c -o main.exe
 
    - There is a func that returns an enum type of the node or entry 
    
-   - before inserting or r wether in initialization or in inserting specify wether the inserted data is string,floating,integer or pointer by giving their enum before the data  
+   - before inserting  wether in initialization or in inserting specify wether the inserted data is string,floating,integer or pointer by giving their enum before the data  
    
    - the implementation is not perfect and might have flaws and can be improved
 ]
