@@ -120,6 +120,7 @@ enum types typeOffEntry(dict * d,char* key){
         dict_entry *entry = d->table[index];
         while (entry != NULL)
         {
+            if(entry == NULL) break;
             entry = entry->next;
             if (strcmp(entry->key, key) == 0)
             {
