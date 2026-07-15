@@ -235,7 +235,7 @@ void dict_insert(dict *dic, char *key,enum types t, va_list args)
         dic->table[index] = malloc(sizeof(dict_entry));
         dict_entry *entry = dic->table[index];
         add_new_entry(entry,t, args);
-        entry->key = malloc(sizeof(char*));
+        entry->key = malloc(strlen(key) + 1);
         strcpy(entry->key, key);
         dic->key_count++;
     }
@@ -263,7 +263,7 @@ void dict_insert(dict *dic, char *key,enum types t, va_list args)
             }   
             entry->next = malloc(sizeof(dict_entry));
             entry = entry->next; 
-            entry->key = malloc(sizeof(char*));
+            entry->key = malloc(strlen(key) + 1);
             strcpy(entry->key, key);
             add_new_entry(entry,t, args);
             dic->key_count++;
